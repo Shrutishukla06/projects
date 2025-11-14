@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Form Validation</title>
+</head>
+<body style="font-family: Arial; background-color: #f5f5f5; margin: 30px;">
+
+    <h1 style="text-align:center;">Form Validation & DOM Manipulation</h1>
+    <p style = "text-align: center;">This example uses JavaScript to validate a simple form and change content dynamically.</p>
+
+    <form id="myForm" onsubmit="return validateForm()" style="text-align:center;">
+        <label>Name: </label>
+        <input type="text" id="name" placeholder="Enter your name"><br><br>
+
+        <label>Email: </label>
+        <input type="email" id="email" placeholder="Enter your email"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <p id="message" style="text-align:center; font-weight:bold; color:green;"></p>
+
+    <div style="text-align:center; margin-top:30px;">
+        <button onclick="changeText()">Click Me!</button>
+        <p id="demo">This text will change when you click the button.</p>
+    </div>
+
+    <script>
+        function validateForm() {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let message = document.getElementById("message");
+
+            if (name == "" || email == "") {
+                message.style.color = "red";
+                message.innerHTML = "Please fill out all fields!";
+                return false;
+            } else {
+                message.style.color = "green";
+                message.innerHTML = "Form submitted successfully!";
+                return false; // prevent actual submission for demo
+            }
+        }
+
+        function changeText() {
+            document.getElementById("demo").innerHTML = "Text changed using DOM manipulation!";
+            document.getElementById("demo").style.color = "blue";
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tech Fest Feedback Form</title>
+</head>
+<body style="font-family: Arial; background-color: #f8f8f8; margin: 40px;">
+
+    <h1 style="text-align: center; color: #333;">Tech Fest Feedback Form</h1>
+    <p style="text-align: center;">We would love to know your experience at our college Tech Fest!</p>
+
+    <form style="width: 400px; margin: 0 auto; background-color: white; padding: 20px; border-radius: 10px;">
+        
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" placeholder="Enter your name" style="width:100%; padding:5px;"><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" placeholder="Enter your email" style="width:100%; padding:5px;"><br><br>
+
+        <label for="rating">How would you rate the event?</label><br>
+        <select id="rating" name="rating" style="width:100%; padding:5px;">
+            <option value="">--Select--</option>
+            <option value="excellent">Excellent</option>
+            <option value="good">Good</option>
+            <option value="average">Average</option>
+            <option value="poor">Poor</option>
+        </select><br><br>
+
+        <label>Was the event well organized?</label><br>
+        <input type="radio" id="yes" name="organized" value="yes"> Yes
+        <input type="radio" id="no" name="organized" value="no"> No
+        <input type="radio" id="maybe" name="organized" value="maybe"> Maybe
+        <br><br>
+
+        <label for="suggestions">Any suggestions or comments:</label><br>
+        <textarea id="suggestions" name="suggestions" rows="4" cols="40" placeholder="Your feedback..." style="width:100%; padding:5px;"></textarea><br><br>
+
+        <input type="submit" value="Submit Feedback" style="background-color:#333; color:white; padding:8px 15px; border:none; border-radius:5px; cursor:pointer;">
+    </form>
+
+</body>
+</html>
